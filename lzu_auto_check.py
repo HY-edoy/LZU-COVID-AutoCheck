@@ -27,11 +27,11 @@ def getSubmit(auToken, dailyCookie, info, FilledInfo):
         "xykh": info_data['xykh'],  # 校园卡号
         "twfw": "0",  # 体温范围(0为小于37.3摄氏度)
         "jkm": "0", # 健康码(0为绿码)
-        "sfzx": "1",  # 是否在校(0离校，1在校)
+        "sfzx": "0",  # 是否在校(0离校，1在校)
         "sfgl": "0",  # 是否隔离(0正常，1隔离)
-        "szsf": info_data['szsf'] if info_data['szsf'] else "",  # 所在省份（没有打过卡或在校则为空）
-        "szds": info_data['szds'] if info_data['szds'] else "",  # 所在地级市（没有打过卡或在校则为空）
-        "szxq": info_data['szxq'] if info_data['szxq'] else "",  # 所在县/区（没有打过卡或在校则为空）
+        "szsf": info_data['szsf'] if info_data['szsf'] else "河北省",  # 所在省份（没有打过卡或在校则为空）
+        "szds": info_data['szds'] if info_data['szds'] else "保定市",  # 所在地级市（没有打过卡或在校则为空）
+        "szxq": info_data['szxq'] if info_data['szxq'] else "满城区",  # 所在县/区（没有打过卡或在校则为空）
         "sfcg": info_data['sfcg'] if info_data['sfcg'] else "0",  # 是否出国（没有则为否）
         "cgdd": info_data['cgdd'] if info_data['cgdd'] else "",  # 出国地点（没有则无）
         "gldd": "",  # 隔离地点
